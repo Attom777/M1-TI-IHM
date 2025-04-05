@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!--Un GridPane avec un alignement centrée et un écart de taille 5 entre chaque colonne et chaque ligne -->
+<GridPane fx:controller="perimetre.PerimetreController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="5" vgap="5">
+
+    <fx:define>
+        <Font fx:id="FONT" name="System Bold" size="15" />
+    </fx:define>
+
+    <!--Un Label "Longueur", Colonne = 0, Ligne = 0 -->
+    <Label font="$FONT" text="Longeur:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="CENTER"/>
+    <!-- Un TextField avec un identifiant textLongeur, Colonne = 1, Ligne = 0 -->
+    <TextField fx:id="textLongueur" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.halignment="CENTER"/>
+
+    <!--Un Label "Largeur", Colonne = 0, Ligne = 1 -->
+    <Label font="$FONT" text="Largeur:" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="CENTER"/>
+    <!--Un TextField avec un identifiant textLargeur, Colonne = 1, Ligne = 1 -->
+    <TextField fx:id="textLargeur" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="CENTER"/>
+
+    <!--Un Label "Resultat", Colonne = 0, Ligne = 2 -->
+    <Label font="$FONT" text="Résulats:" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+    <!--Un Label "0.0" avec un identifiant valResultat -->
+    <Label font="$FONT" fx:id="valResultat" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+
+    <!--Un Button "Calculer" qui appelera la méthode buttonCalculer, Colonne = 0, Ligne = 3 -->
+    <Button font="$FONT" text="Calculer" onAction="#buttonCalculer" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+    <!--Un Button "Nettoyer" qui appelera la méthode buttonNettoyer, Colonne = 1, Ligne = 3 -->
+    <Button font="$FONT" text="Nettoyer" onAction="#buttonNettoyer" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+
+</GridPane>
